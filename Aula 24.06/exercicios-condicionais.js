@@ -141,7 +141,7 @@ if (idade < 0 || idade > 130) {
 /*  8. Crie uma variável com o turno de aula: M-matutino ou V-Vespertino ou N- Noturno. Mostre a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
 */
 
-let turno = "Q";
+let turno = "V";
 
 if (turno === "V") {
     console.log("Bom dia!");
