@@ -18,6 +18,8 @@ if (media >= 7.0) {
     console.log("Que pena! Você foi reprovado!")
 }
 
+console.log("Fim!");
+
 //----------------------------
 
 /*  2. Simule a tabela do IMC com base no valor calculado pela formula: IMC = PESO / (ALTURA x ALTURA).
@@ -50,6 +52,8 @@ if (IMC < 18.5) {
     console.log("Obesidade grau III");
 }
 
+console.log("Fim!");
+
 //---------------------------------------
 
 /*  3. Defina um número a e um número b. Verifica qual o maior, ou menor, ou se são iguais!
@@ -65,6 +69,8 @@ if (a > b) {
 } else {
     console.log("a e b são iguais");
 }
+
+console.log("Fim!");
 
 //------------------------------------------
 
@@ -83,7 +89,9 @@ if (quantidadeDependentes === 0) {
     console.log("Com ajuste de 40% do salário. Receberá: R$ " + salario);
 }
 
-// //--------------------------------------------
+console.log("Fim!");
+
+//--------------------------------------------
 
 /*  5. Crie uma variável para armazenar um dia da semana (1 - Domingo, 2 - Segunda, ... 7 - Sábado). Com base no valor indique se é final de semana ou dia útil.
 */
@@ -98,7 +106,9 @@ if (diaDaSemana === 1 || diaDaSemana === 7) {
     console.log("Valor inválido. Insira um número de 1 a 7.");
 }
 
-// //--------------------------------------------
+console.log("Fim!");
+
+//--------------------------------------------
 
 /*  6. Crie uma variável ano e verifique se este ano é bissexto. Um ano é bissexto quando: 
    Caso 1) É um número divisível por 4, mas não é divisível por 100. 
@@ -113,7 +123,9 @@ if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 4 == 0 && ano % 100 == 0 && ano %
     console.log("Este ano não é bissexto!");
 }
 
-// //--------------------------------------------
+console.log("Fim!");
+
+//--------------------------------------------
 
 /*  7. Crie uma variável idade. Caso seja uma idade inválida (negativa ou maior que 130) mostre uma mensagem de aviso.
  */
@@ -140,3 +152,5 @@ if (turno === "V") {
 } else {
     console.log("Valor inválido! Tente novamente!")
 }
+
+console.log("Fim!");
