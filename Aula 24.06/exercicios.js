@@ -12,6 +12,7 @@ let por = 10;
 let mat = 8;
 let his = 7;
 let geo = 9;
+let inf = 8;
 
 let peso1 = 3;
 let peso2 = 2;
@@ -19,7 +20,7 @@ let peso3 = 1;
 let peso4 = 4;
 let peso5 = 5;
 
-let media = (por * 3 + mat * 2 + his * 1 + geo * 4) / ( peso1 + peso2 + peso3 + peso4 + peso5);
+let media = (por * 3 + mat * 2 + his * 1 + geo * 4 + inf * 5) / ( peso1 + peso2 + peso3 + peso4 + peso5);
 
 console.log(media);
 
