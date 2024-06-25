@@ -18,10 +18,12 @@ while (num <= 10) {
 7 x 10 = 70
 */
 
+// Concatenação: 7 x 1 = 7...
 let n2 = 1;
+let n = 7;
 
 while (n2 <= 10) {
-    console.log(n2 * 7);
+    console.log(n + " X " + n2 + " = " + n2 * n);
     n2++;
 }
 
@@ -43,8 +45,8 @@ while (n3 <= 10) {
 let impar = 1;
 let soma = 0;
 
-while (impar < 1000) {
-    if (impar % 2 != 0) {
+while (impar <= 999) { 
+    if (impar % 2 !== 0) {
         soma += impar;
     }
     impar++;
@@ -62,8 +64,8 @@ let numero = 1;
 let total = 0;
 
 while (numero <= 1000) {
-    if (numero % 9 == 0) {
-        console.log(numero);
+    if (numero % 9 === 0) {
+        console.log(numero + " é divisível por 9."); // Adição da mensagem.
         total++;
     }
     numero++;

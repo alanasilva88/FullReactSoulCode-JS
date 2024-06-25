@@ -4,7 +4,7 @@
     // Valor inicial (Variável de controle ou um contador)
     // Atualização
 
-// While = Enquanto
+// While = Enquanto - repetição indefinida
 /*
     while (condição) {
         // o código que será repetido 
