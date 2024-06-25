@@ -9,7 +9,6 @@ for (let a = 1; a <= 10; a++) {
 }
 
 //-----------------------------------------
-
 /*  2. Use um laço for para imprimir na tela a série de Fibonacci até o décimo termo. A sequência de Fibonacci é formada pela sequência: 0,1,1,2,3,5,8,13,21,34,55. */
 
 let n1 = 0;
@@ -19,7 +18,7 @@ let nz;
 console.log(n1);
 console.log(n2);
 
-for (let f = 3; f <= 10; f++) {
+for (let f = 0; f < 10; f++) {
     nz = n1 + n2; // soma dos dois anteriores
     console.log(nz);
     n1 = n2;
