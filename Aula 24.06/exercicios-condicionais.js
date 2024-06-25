@@ -26,17 +26,20 @@ console.log("Fim!");
 Indique o status com base no valor do IMC.
  
 Peso em Kg e Altura em M
-Abaixo de 18,5 ->	Abaixo do peso	
+Abaixo de 18,5 -> Abaixo do peso	
 Entre 18,5 e 24,9 -> Peso normal	
 Entre 25,0 e 29,9 -> Sobrepeso	
 Entre 30,0 e 34,9 -> Obesidade grau I
 Entre 35,0 e 39,9 -> Obesidade grau II	
-Acima de 40,0 ->	Obesidade grau III
+Acima de 40,0 -> Obesidade grau III
 */
 
 let peso = 60;
 let altura = 1.63;
 let IMC = peso / (altura * altura);
+
+// Acréscimo do console
+console.log("Seu IMC é igual a "+ IMC);
 
 if (IMC < 18.5) {
     console.log("Abaixo do peso");
