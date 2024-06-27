@@ -63,8 +63,21 @@ console.log(negativo(valor1));  //  true
 console.log(negativo(valor2));  //  false
 console.log(negativo(valor3));  //  true
 
-//----------------------------------------------
 
+//-------- CORREÇÃO (+ 1 OPÇÃO) ---------------------
+
+function ehnegativo(num) {
+    if (num < 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(ehnegativo(-2));
+console.log(ehnegativo(3));
+
+//----------------------------------------------
 
 /*  4. Crie uma função que conte até um número passado por parâmetro. Exemplo: contar(5) -> 1 até 5, contar(1000) -> 1 até 1000. OBS: Não possui retorno. */ 
 
@@ -98,14 +111,14 @@ console.log(`Seu nome completo é ${nomeSobrenome(nome, sobrenome)}`);
 
 /*  6. Crie uma função para calcular a área de um circulo = PI * R * R. Considere PI = 3.14. */
 
-function aCirculo(raio1) {
-    let pi = 3.14;
+function calcularAreaCirculo(raio1) {
+    const pi = 3.14;
     return (pi * raio1 * raio1);
 }
 
 let raio1 = 30;
 
-console.log(`Este círculo possui área de: ` + aCirculo(raio1) + `m².`);
+console.log(`Este círculo possui área de: ` + calcularAreaCirculo(raio1) + `m².`);
 
 //----------------------------------------------
 
@@ -116,8 +129,8 @@ console.log(`Este círculo possui área de: ` + aCirculo(raio1) + `m².`);
     Qualquer outro diâmetro => Nível inválido
 */
 
-function aCirculo(r) {
-    let pi = 3.14;
+function calcularAreaCirculo(r) {
+    const pi = 3.14;
     let area = pi * r ** 2;
     
     if (area >= 1 && area <= 20) {
@@ -128,7 +141,7 @@ function aCirculo(r) {
 
     } else {
         console.log("Este círculo possui NÍVEL INVÁLIDO!");
-        
+
     }
 
     return area; 
@@ -136,19 +149,19 @@ function aCirculo(r) {
 
 let raio = 2; 
 
-console.log(`Este círculo possui área de: ` + aCirculo(raio) + `m².`);
+console.log(`Este círculo possui área de: ` + calcularAreaCirculo(raio) + `m².`);
 
 //----------------------------------------------
 
 /*  8. Escreva uma função que receba uma string e retorne a mesma string em letras minúsculas.  */
 
 function converterString (string) {
-    return string.toUpperCase();
+    return string.toLowerCase();
 }
 
-let string = "soulcode";
+let string = "SOULCODE";
 
-console.log(converterString (string)); //Maiúscula
+console.log(converterString (string)); 
 
 //----------------------------------------------
 
