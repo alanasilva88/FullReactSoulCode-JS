@@ -5,7 +5,7 @@ let presenca = ["Alana", "Beatriz"];
 function criarpresenca(nomes, presenca) {
     let faltaram = [];
     
-    for (let i = 0; i < nomes.length; i++) { // percorre a lista
+    for (let i = 0; i < nomes.length; i++) { // percorre a lista -- poderia ter usado o for (let nome of nomes)
         if (!presenca.includes(nomes[i])) { // verifica se não está na lista
             faltaram.push(nomes[i]); // adiciona a lista de faltantes caso não esteja na lista
         }
@@ -23,7 +23,7 @@ let num = [1, 2, 3, 4, 5]
 function elevarQuadrado (num, valor) {
     let resultado = [];
 
-    for (let i = 0; i < num.length; i++) {
+    for (let i = 0; i < num.length; i++) { // poderia ter usado o for (let n of num)
         resultado.push(num[i] * num[i]); // adiciona a lista resultado a potência dos elementos do array 
     }
     return resultado;
@@ -40,10 +40,10 @@ let extensao = "pdf";
 function filtrarExtensao(arquivos, extensao) {
     let resultado = [];
     
-    for (let i = 0; i < arquivos.length; i++) {
+    for (let i = 0; i < arquivos.length; i++) { // poderia ter usado o for(let arquivo of arquivos), pois percorre de forma mais rápida
         let arquivo = arquivos[i];
 
-        if (arquivo.indexOf('.' + extensao) === arquivo.length - (extensao.length + 1))  {
+        if (arquivo.endsWith(extensao))  { // modifiquei de acordo com a correção, pois é mais simplificado o código
             resultado.push(arquivos[i]);
         }
         
@@ -61,7 +61,7 @@ console.log(`Os arquivos em .pdf do array são (${filtrarExtensao(arquivos, exte
 let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 console.log("Lista com o for-of:");
-for (let numero of numeros) {
+for (let numero of numeros) { // para cada numero dentro de numeros; faça alguma coisa.
     console.log(numero);
 }
 
@@ -76,7 +76,7 @@ for (let i = 0; i < numeros.length; i++) {
 function filtrarStringsMaioresQueCinco(array) {
     let resultado = [];
     
-    for (let f of array) {
+    for (let f of array) { 
         if (f.length > 5) {
             resultado.push(f);
         }
@@ -95,7 +95,7 @@ console.log("Strings com mais de 5 caracteres:" + filtrarStringsMaioresQueCinco(
 let numerosInteiros = [6, 7, 8, 75, 5, 4, 3];
 let maiorNumero = numerosInteiros[0]; // começando com a ideia que o índice 0 é o maior número
 
-for (let i = 1; i < numerosInteiros.length; i++) {
+for (let i = 1; i < numerosInteiros.length; i++) { // com o for se tem controle por onde percorre 
     
     if (numerosInteiros[i] > maiorNumero) { // Verifica se o elemento é o maior número
         maiorNumero = numerosInteiros[i]; // Atualizamos o maior número se encontrarmos um maior
@@ -118,6 +118,17 @@ const cpf = "056.985.990-23";
 
 console.log(`Os dois últimos nomes do CPF são: ${extrairVerificadores(cpf)}`)
 
+// outra forma:
+
+function extrairVerificadores2(cpf) {
+
+    const partesCpf = cpf.split("-"); 
+
+    return partesCpf[1];
+}
+
+console.log(extrairVerificadores2("056.985.990-23"));
+
 
 
 /*  8. Crie uma função que inverte uma string. Retorna ela invertida. */
@@ -135,7 +146,7 @@ console.log("Palavra invertida: " + inverterString(string));
 
 /*  9. Escreva uma função que receba uma palavra e um número. Retorne a palavra repetida a quantidade de vezes indicada pelo segundo parâmetro. Exemplo: repetir("batata", 3) -> "batatabatatabatata". OBS: Utilize um loop para resolver. */
 
-function repetir(palavra, vezes) {
+function repetir(palavra, vezes) { // para simplificar poderia ter usado o repeat
 
     let palavraRepetida = "";
   
@@ -156,11 +167,13 @@ console.log(repetir(palavra, vezes));
 /*  10. Escreva uma função que receba duas strings e retorne true se elas forem iguais ou false caso contrário. */
 function compararStrings(str1, str2) {
 
-    if (str1 === str2) {
-      return true;
-    } else {
-      return false;
-    }
+    // if (str1 === str2) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+
+    return str1 === str2; // assim fica mais simplificado
 }
 
 
@@ -184,6 +197,14 @@ let separador = ".";
 
 console.log(formatarData(dataArray, separador));
 
+// Poderia ser:
+
+let data = ["20", "06", "2000"];
+function exercicio11 (arr, sep) {
+    return arr.join(sep);
+}
+
+console.log(exercicio11(data, "."));
 
 
 /*  12. Crie uma função que recebe um array, um valor de busca e um valor padrão. Caso o elemento exista no array retorne o elemento, caso contrário retorne o valor padrão definido via parâmetro. Ex: busca(array, 'batata', 'não tem batata') -> 'não tem batata' */
@@ -192,7 +213,7 @@ let alimentos = ["batata", "chuchu", "alface"];
 function buscarPadrao (array, valor, padrao) {
    if (array.includes(valor)) {
     return valor;
-   } else {
+   } else { // pode retirar o else
     return padrao;
    }
 }
