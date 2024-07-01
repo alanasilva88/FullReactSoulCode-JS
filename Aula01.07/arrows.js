@@ -50,14 +50,14 @@ const numeros = [1, 2, 3, 4, 5, 6, 7];
 // Similar ao for-of
 numeros.forEach((n) => {
     console.log(`O número é: ${n}`);
-})
+});
 // para percorrer o índice
 // Similar ao for-of
 numeros.forEach((n, i) => {
     // n = elemento no array
     // i = índice do elemento
     console.log(`O elemento no índice ${i} é ${n}`);
-})
+});
 
 // Exemplo: somar todos os números de um arry (forEach);
 const num = [1, 2, 3, 4, 5, 6, 7];
@@ -101,6 +101,7 @@ const filtrarStrings = (arr) => {
 }
 
 // Map = Cria um novo array com os resultados da função aplicada em cada elemento
+
 const num2 = [3, 4, 9, 10];
 // Cada elemento no array, será aplicado na função
 //  O resultado será gerado em um novo array
