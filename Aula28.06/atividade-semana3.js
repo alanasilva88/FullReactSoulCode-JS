@@ -131,13 +131,18 @@ console.log(contarFrequenciaCaracteres(texto));
 //  Exercício 8: Escreva uma função que recebe um email, e ofusca parte do seu endereço. Por exemplo: jose.almir@dev.com -> j*********@dev.com.
 
 // Acredito que tenha outras maneiras que se adequam melhor, porém pensei no momento em utilizar o replace para remover e substituir o que foi pedido na questão, precisando de três parâmetros que é o email, a parte que quero remover e a sua substituição. 
-function ofuscarParteEmail(email, parteRemover, substituicao) {
-    return email.replace(parteRemover, substituicao);
+function ofuscaEmail(email) {
+    const partes = email.split('@');
+    const nomeUsuario = partes[0];
+    const dominio = partes[1];
+
+    const nomeOfuscado = nomeUsuario.charAt(0) + '*'.repeat(nomeUsuario.length - 2);
+
+    return nomeOfuscado + '@' + dominio;
 }
 
-const email = "jose.almir@dev.com";
-const palavraRemover = "ose.almir";
-console.log(ofuscarParteEmail(email, palavraRemover, "*********"));  
-
+const emailOriginal = 'jose.almir@dev.com';
+const emailOfuscado = ofuscaEmail(emailOriginal);
+console.log(emailOfuscado);
 
 

@@ -73,3 +73,5 @@ const aluno2 = {
 };
 
 console.log(aluno2);
+
+
