@@ -34,9 +34,6 @@ Este repositório contém todos os projetos e atividades desenvolvidos durante o
 
 - **Promises**: Introdução a programação assíncrona com JavaScript, utilizando Promises para lidar com operações assíncronas como requisições de rede.
 
-## Deploy
-
-Embora este repositório seja focado em atividades práticas de JavaScript, você pode visualizar a evolução dos projetos e atividades na página do curso [SoulCode](https://soulcodeacademy.org/).
 
 ## Sobre a SoulCode
 
